@@ -24,7 +24,7 @@
          <children>
             <Label text="gymbone.ch" textFill="WHITE">
                <font>
-                  <Font name="Calibri Light" size="27.0" />
+                  <Font name="SansSerif Regular" size="26.0" />
                </font>
                <GridPane.margin>
                   <Insets left="50.0" top="10.0" />
@@ -32,7 +32,7 @@
             </Label>
             <Button id="closebutton" mnemonicParsing="false" onAction="#closeOperation" stylesheets="@application.css" text="X" GridPane.columnIndex="1">
                <font>
-                  <Font name="Calibri Light" size="27.0" />
+                  <Font name="SansSerif Regular" size="27.0" />
                </font>
                <GridPane.margin>
                   <Insets left="20.0" top="10.0" />
@@ -41,48 +41,179 @@
          </children>
       </GridPane>
       <Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0" scaleY="0.25" style="-fx-background-color: white;" />
-      <GridPane layoutY="151.0" prefHeight="390.0" prefWidth="970.0">
-        <columnConstraints>
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="466.0" minHeight="5.0" prefHeight="299.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="219.0" minHeight="0.0" prefHeight="91.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="375.0" stroke="BLACK" strokeType="INSIDE" width="256.0">
-               <GridPane.margin>
-                  <Insets top="-40.0" />
-               </GridPane.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="375.0" stroke="BLACK" strokeType="INSIDE" width="256.0" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets top="-40.0" />
-               </GridPane.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="375.0" stroke="BLACK" strokeType="INSIDE" width="256.0" GridPane.columnIndex="2">
-               <GridPane.margin>
-                  <Insets top="-40.0" />
-               </GridPane.margin>
-            </Rectangle>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="252.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE" GridPane.rowIndex="1">
-               <font>
-                  <Font name="Calibri Light" size="15.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="252.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="Calibri Light" size="15.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="252.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <font>
-                  <Font name="Calibri Light" size="15.0" />
-               </font>
-            </Button>
-         </children>
-      </GridPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="34.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+      <Button layoutX="34.0" layoutY="478.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="256.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="357.0" layoutY="478.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="256.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="676.0" layoutY="478.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="256.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="130.0" layoutY="140.0" text="Noob" textFill="#bcbbbb">
+         <font>
+            <Font name="SansSerif Regular" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="182.0" text="CHF 500.00" textFill="#6e6b6b">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="209.0" text="12 Monate Laufzeit" textFill="#b2b2b2" />
+      <Separator layoutX="62.0" layoutY="248.0" prefWidth="200.0" scaleY="0.25" style="-fx-background-color: #707070;" />
+      <Label layoutX="97.0" layoutY="264.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="266.0" text="Training in Basel">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="289.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="291.0" text="365 Tage  Zutritt im Jahr">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="316.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="318.0" text="Krankenkassen-Rückerstattung">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="342.0" text="Täglicher Check-in bis 15:00 Uhr">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="340.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="358.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+      <Label layoutX="416.0" layoutY="139.0" text="Hard Worker" textFill="#bcbbbb">
+         <font>
+            <Font name="SansSerif Regular" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="175.0" text="CHF 750.00" textFill="#6e6b6b">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="202.0" text="12 Monate Laufzeit" textFill="#b2b2b2" />
+      <Separator layoutX="385.0" layoutY="241.0" prefWidth="200.0" style="-fx-background-color: #707070;" />
+      <Label layoutX="381.0" layoutY="260.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="395.0" layoutY="262.0" text="Training in der ganzen Schweiz">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="395.0" layoutY="282.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="409.0" layoutY="284.0" text="365 Tage  Zutritt im Jahr">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="309.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="311.0" text="Krankenkassen-Rückerstattung">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="335.0" text="Täglicher Check-in bis 15:00 Uhr">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="333.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="676.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+      <Label layoutX="766.0" layoutY="139.0" text="Arnold" textFill="#bcbbbb">
+         <font>
+            <Font name="SansSerif Regular" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="739.0" layoutY="181.0" text="CHF 999.00" textFill="#6e6b6b">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="739.0" layoutY="208.0" text="24 Monate Laufzeit" textFill="#b2b2b2" />
+      <Separator layoutX="704.0" layoutY="247.0" prefWidth="200.0" style="-fx-background-color: #707070;" />
+      <Label layoutX="739.0" layoutY="263.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="752.0" layoutY="265.0" text="Training in Basel">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="714.0" layoutY="288.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="728.0" layoutY="290.0" text="365 Tage  Zutritt im Jahr">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="695.0" layoutY="315.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="707.0" layoutY="317.0" text="Krankenkassen-Rückerstattung">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="702.0" layoutY="341.0" text="Täglicher Check-in bis 15:00 Uhr">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="690.0" layoutY="339.0" text="✔" textFill="#46cf52">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
