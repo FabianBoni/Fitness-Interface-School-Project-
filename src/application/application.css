@@ -16,3 +16,16 @@
 .apply{
 	-fx-cursor:hand;
 }
+
+.textfield{
+	-fx-background-radius: 0;
+}
+
+.registerloginbutton{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+}
+
+.registerloginbutton:hover{
+	-fx-cursor: hand;
+}
