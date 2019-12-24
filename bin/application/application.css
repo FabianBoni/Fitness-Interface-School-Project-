@@ -10,7 +10,7 @@
 .apply{
 	-fx-background-color: transparent;
 	-fx-background-color: #707070;
-	-fx-background-radius: 0;
+	-fx-background-radius: 0.0;
 }
 
 .apply{
@@ -18,7 +18,7 @@
 }
 
 .textfield{
-	-fx-background-radius: 0;
+	-fx-background-radius: 0.0;
 }
 
 .registerloginbutton{
@@ -27,5 +27,14 @@
 }
 
 .registerloginbutton:hover{
+	-fx-cursor: hand;
+}
+
+#applybutton{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+}
+
+#applybutton:hover{
 	-fx-cursor: hand;
 }
