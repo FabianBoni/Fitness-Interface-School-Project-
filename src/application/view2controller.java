@@ -1,10 +1,17 @@
 package application;
 
+import java.io.IOException;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class view2controller {
 
@@ -20,14 +27,6 @@ public class view2controller {
 	@FXML
 	private TextField username, password, prename, name, birthdate;
 
-	view2controller() {
-		final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
-		try {
-			Class.forName(DRIVER_CLASS);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
 
 	@FXML
 	public void register() {
@@ -60,6 +59,25 @@ public class view2controller {
 			applybutton.setLayoutY(430);
 			applybutton.setText("Registrieren ➠");
 		}
+	}
+	
+	@FXML
+	protected void loginregister(ActionEvent event) {
+
+		Stage stage;
+		Parent root = null;
+		
+		stage = (Stage) anchorpane.getScene().getWindow();
+
+		try {
+			root = FXMLLoader.load(getClass().getResource("/application/view3.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
 	}
 
 	public void closeOperation() {

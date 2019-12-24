@@ -4,13 +4,15 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="970.0" style="-fx-background-color: #423C3C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view2controller">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="970.0" style="-fx-background-color: #423C3C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view2controller">
    <children>
       <GridPane layoutX="16.0" prefHeight="66.0" prefWidth="954.0">
         <columnConstraints>
@@ -40,5 +42,55 @@
          </children>
       </GridPane>
       <Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0" scaleY="0.25" style="-fx-background-color: white;" />
+      <ImageView fitHeight="425.0" fitWidth="568.0" layoutX="404.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bg-pl-p-500.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="67.0" layoutY="89.0" text="Mein Vertrag" textFill="WHITE">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="150.0" text="Vertrag" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="172.0" text="XXXX -" textFill="#838383">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="172.0" text="XXXX" textFill="#98ff53">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="227.0" text="Vertragsbeginn" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="252.0" text="dd.mm.yyyy" textFill="#838383">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="307.0" text="Trainingsbeginn" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="328.0" text="dd.mm.yyyy" textFill="#838383">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="67.0" layoutY="372.0" mnemonicParsing="false" styleClass="optionsbutton" stylesheets="@application.css" text="Button">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
    </children>
 </AnchorPane>

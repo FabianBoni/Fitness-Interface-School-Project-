@@ -38,3 +38,9 @@
 #applybutton:hover{
 	-fx-cursor: hand;
 }
+
+.optionsbutton{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+	-fx-border-color: white;
+}
