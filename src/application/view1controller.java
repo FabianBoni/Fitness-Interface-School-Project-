@@ -15,11 +15,7 @@ public class view1controller {
 
 	@FXML
 	private Button applybutton, noob, hardworker, arnold;
-
-	public void closeOperation() {
-		System.exit(0);
-	}
-
+	
 	@FXML
 	private AnchorPane anchorpane;
 
@@ -27,31 +23,39 @@ public class view1controller {
 	protected void loginregister(ActionEvent event) {
 
 		Stage stage;
-		Parent root = null;
 
 		stage = (Stage) anchorpane.getScene().getWindow();
 
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/view2.fxml"));
+
+		Parent root = null;
 		try {
-			root = FXMLLoader.load(getClass().getResource("/application/view2.fxml"));
+			root = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
+		view2controller v2 = fxmlLoader.<view2controller>getController();
+		
 		Scene scene = new Scene(root);
+
 		stage.setScene(scene);
+
 		stage.show();
-		
-		view3controller v3 = Loader.getController();
-		
+
 		if (event.getSource() == noob) {
-			
+			v2.setButton(noob.getId());
 		}
 
 		else if (event.getSource() == hardworker) {
-			
-			
+			v2.setButton(hardworker.getId());
 		} else {
-			
+			v2.setButton(arnold.getId());
 		}
 	}
+	
+	public void closeOperation() {
+		System.exit(0);
+	}
+
 }

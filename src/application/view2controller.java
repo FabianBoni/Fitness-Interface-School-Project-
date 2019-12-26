@@ -15,6 +15,8 @@ import javafx.stage.Stage;
 
 public class view2controller {
 	
+	private String id;
+
 	@FXML
 	private AnchorPane anchorpane;
 
@@ -63,24 +65,43 @@ public class view2controller {
 	@FXML
 	protected void loginregister(ActionEvent event) {
 
-		Stage stage;
 		Parent root = null;
+
+		Stage stage;
 
 		stage = (Stage) anchorpane.getScene().getWindow();
 
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/view3.fxml"));
+
 		try {
-			root = FXMLLoader.load(getClass().getResource("/application/view3.fxml"));
+			root = (Parent) fxmlLoader.load();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
+		view3controller v3 = fxmlLoader.<view3controller>getController();
+		
+		v3.setContracttype(getButton());
+		
 		Scene scene = new Scene(root);
+
 		stage.setScene(scene);
+
 		stage.show();
+		
 	}
 
 	public void closeOperation() {
-		view1controller v1c = new view1controller();
-		v1c.closeOperation();
+		view1controller v1 = new view1controller();
+		v1.closeOperation();
+	}
+
+	public void setButton(String id) {
+		this.id = id;
+		System.out.println(this.id);
+	}
+	
+	public String getButton() {
+		return this.id;
 	}
 }
