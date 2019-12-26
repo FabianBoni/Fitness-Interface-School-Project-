@@ -44,7 +44,7 @@
       <Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0" scaleY="0.25" style="-fx-background-color: white;" />
       <ImageView fitHeight="425.0" fitWidth="568.0" layoutX="404.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../bg-pl-p-500.png" />
+            <Image url="@img/vertrag.png" />
          </image>
       </ImageView>
       <Label layoutX="67.0" layoutY="89.0" text="Mein Vertrag" textFill="WHITE">
@@ -54,43 +54,70 @@
       </Label>
       <Label layoutX="67.0" layoutY="150.0" text="Vertrag" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="Microsoft New Tai Lue" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="67.0" layoutY="172.0" text="XXXX -" textFill="#838383">
+      <Label fx:id="contracttype" layoutX="67.0" layoutY="180.0" text="XXXX -" textFill="#838383">
          <font>
-            <Font size="25.0" />
+            <Font name="Microsoft New Tai Lue" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="149.0" layoutY="172.0" text="XXXX" textFill="#98ff53">
+      <Label fx:id="contractnumber" layoutX="132.0" layoutY="180.0" text="XXXX" textFill="#98ff53">
          <font>
-            <Font size="25.0" />
+            <Font name="Microsoft New Tai Lue" size="20.0" />
          </font>
       </Label>
       <Label layoutX="67.0" layoutY="227.0" text="Vertragsbeginn" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="Microsoft New Tai Lue" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="67.0" layoutY="252.0" text="dd.mm.yyyy" textFill="#838383">
+      <Label layoutX="67.0" layoutY="255.0" text="dd.mm.yyyy" textFill="#838383">
          <font>
-            <Font size="25.0" />
+            <Font name="Microsoft New Tai Lue" size="20.0" />
          </font>
       </Label>
       <Label layoutX="67.0" layoutY="307.0" text="Trainingsbeginn" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="Microsoft New Tai Lue" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="67.0" layoutY="328.0" text="dd.mm.yyyy" textFill="#838383">
+      <Label layoutX="67.0" layoutY="336.0" text="dd.mm.yyyy" textFill="#838383">
          <font>
-            <Font size="25.0" />
+            <Font name="Microsoft New Tai Lue" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="67.0" layoutY="372.0" mnemonicParsing="false" styleClass="optionsbutton" stylesheets="@application.css" text="Button">
+      <Button layoutX="63.0" layoutY="381.0" mnemonicParsing="false" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag pausieren">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="270.0" layoutY="381.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="187.0" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag ändern">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="63.0" layoutY="441.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="187.0" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag kündigen">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="270.0" layoutY="441.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="227.0" styleClass="optionsbutton" stylesheets="@application.css" text="Mein Trainingsverlauf">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="20.0" />
+         </font>
       </Button>
    </children>
 </AnchorPane>

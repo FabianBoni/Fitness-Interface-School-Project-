@@ -14,7 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class view2controller {
-
+	
 	@FXML
 	private AnchorPane anchorpane;
 
@@ -26,7 +26,6 @@ public class view2controller {
 
 	@FXML
 	private TextField username, password, prename, name, birthdate;
-
 
 	@FXML
 	public void register() {
@@ -60,13 +59,13 @@ public class view2controller {
 			applybutton.setText("Registrieren ➠");
 		}
 	}
-	
+
 	@FXML
 	protected void loginregister(ActionEvent event) {
 
 		Stage stage;
 		Parent root = null;
-		
+
 		stage = (Stage) anchorpane.getScene().getWindow();
 
 		try {

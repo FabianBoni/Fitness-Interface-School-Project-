@@ -5,6 +5,7 @@
 
 #closebutton:hover{
 	-fx-cursor:hand;
+	-fx-text-fill: red;
 }
 
 .apply{
@@ -43,4 +44,11 @@
 	-fx-background-color: transparent;
 	-fx-text-fill: white;
 	-fx-border-color: white;
+	 -fx-border-radius: 10 10 10 0;
 }
+
+.optionsbutton:hover{
+	-fx-cursor: hand;
+}
+
+
