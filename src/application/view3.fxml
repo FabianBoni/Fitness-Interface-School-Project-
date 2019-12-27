@@ -57,7 +57,7 @@
             <Font name="Microsoft New Tai Lue" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="contracttype" layoutX="67.0" layoutY="180.0" text="XXXX -" textFill="#838383">
+      <Label fx:id="contracttype" layoutX="67.0" layoutY="180.0" text="XXXX" textFill="#838383">
          <font>
             <Font name="Microsoft New Tai Lue" size="20.0" />
          </font>
