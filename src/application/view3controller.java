@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -74,11 +75,16 @@ public class view3controller {
 	}
 	
 	public void cancle() {
-		
+		BoxBlur blur = new BoxBlur();
+		blur.setHeight(10);
+		blur.setWidth(10);
+		blur.setIterations(5);
+		anchorpane.setEffect(blur);
 	}
 	
 	public void edit() {
-		
+		Label confirmation = new Label("Wollen Sie den Vertrag wirklich kündigen?");
+		anchorpane.getChildren().add(confirmation);
 	}
 	
 	public void pause() {
