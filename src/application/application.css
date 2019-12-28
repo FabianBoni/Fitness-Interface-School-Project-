@@ -51,4 +51,17 @@
 	-fx-cursor: hand;
 }
 
+#optionkeys{
+	-fx-background-color: white;
+	-fx-alignment: center;
+}
+
+.keybuttons{
+	-fx-background-color: transparent;
+	-fx-text-fill: black;
+}
+
+.keybuttons:hover{
+	-fx-cursor: hand;
+}
 
