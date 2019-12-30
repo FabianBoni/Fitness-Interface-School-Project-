@@ -41,7 +41,7 @@
 			</children>
 		</GridPane>
 		<Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0" scaleY="0.25" style="-fx-background-color: white;" />
-      <ListView layoutX="51.0" layoutY="170.0" prefHeight="284.0" prefWidth="335.0" />
+      <ListView fx:id="listview" layoutX="51.0" layoutY="170.0" prefHeight="284.0" prefWidth="335.0" />
       <Label layoutX="51.0" layoutY="92.0" text="MEIN TRAININGSVERLAUF" textFill="WHITE">
          <font>
             <Font name="Microsoft New Tai Lue" size="35.0" />
@@ -62,11 +62,11 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" styleClass="keybuttons" stylesheets="@application.css" text="✚">
+            <Button onAction="#addElement" mnemonicParsing="false" styleClass="keybuttons" stylesheets="@application.css" text="✚">
                <font>
                   <Font name="Microsoft New Tai Lue" size="24.0" />
                </font></Button>
-            <Button mnemonicParsing="false" styleClass="keybuttons" stylesheets="@application.css" text="✘" GridPane.rowIndex="1">
+            <Button onAction="#removeElement" mnemonicParsing="false" styleClass="keybuttons" stylesheets="@application.css" text="✘" GridPane.rowIndex="1">
                <font>
                   <Font name="Microsoft New Tai Lue Bold" size="24.0" />
                </font>

@@ -11,24 +11,15 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane" maxHeight="-Infinity"
-	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-	prefHeight="540.0" prefWidth="970.0"
-	style="-fx-background-color: #423C3C;"
-	xmlns="http://javafx.com/javafx/11.0.1"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="application.view1controller">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="970.0" style="-fx-background-color: #423C3C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view1controller">
 	<children>
 		<GridPane layoutX="16.0" prefHeight="66.0" prefWidth="954.0">
 			<columnConstraints>
-				<ColumnConstraints halignment="LEFT"
-					hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-				<ColumnConstraints halignment="RIGHT"
-					hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 			</columnConstraints>
 			<rowConstraints>
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 			</rowConstraints>
 			<children>
 				<Label text="gymbone.ch" textFill="WHITE">
@@ -39,9 +30,7 @@
 						<Insets left="50.0" top="10.0" />
 					</GridPane.margin>
 				</Label>
-				<Button id="closebutton" mnemonicParsing="false"
-					onAction="#closeOperation" stylesheets="@application.css" text="X"
-					GridPane.columnIndex="1">
+				<Button id="closebutton" mnemonicParsing="false" onAction="#closeOperation" stylesheets="@application.css" text="X" GridPane.columnIndex="1">
 					<font>
 						<Font name="Microsoft New Tai Lue" size="27.0" />
 					</font>
@@ -51,55 +40,36 @@
 				</Button>
 			</children>
 		</GridPane>
-		<Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0"
-			scaleY="0.25" style="-fx-background-color: white;" />
-		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE"
-			height="352.0" layoutX="34.0" layoutY="116.0" stroke="BLACK"
-			strokeType="INSIDE" width="256.0" />
-		<Button fx:id="noob" onAction="#loginregister" layoutX="34.0"
-			layoutY="478.0" mnemonicParsing="false" prefHeight="30.0"
-			prefWidth="256.0" styleClass="apply" stylesheets="@application.css"
-			text="Jetzt Anmelden →" textFill="WHITE">
+		<Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0" scaleY="0.25" style="-fx-background-color: white;" />
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="34.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+		<Button fx:id="noob" layoutX="34.0" layoutY="478.0" mnemonicParsing="false" onAction="#loginregister" prefHeight="30.0" prefWidth="256.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE">
 			<font>
 				<Font name="Calibri Light" size="15.0" />
 			</font>
 		</Button>
-		<Button fx:id="hardworker" onAction="#loginregister"
-			layoutX="357.0" layoutY="478.0" mnemonicParsing="false"
-			prefHeight="30.0" prefWidth="256.0" styleClass="apply"
-			stylesheets="@application.css" text="Jetzt Anmelden →"
-			textFill="WHITE">
+		<Button fx:id="hardworker" layoutX="357.0" layoutY="478.0" mnemonicParsing="false" onAction="#loginregister" prefHeight="30.0" prefWidth="256.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE">
 			<font>
 				<Font name="Calibri Light" size="15.0" />
 			</font>
 		</Button>
-		<Button fx:id="arnold" onAction="#loginregister"
-			layoutX="676.0" layoutY="478.0" mnemonicParsing="false"
-			prefHeight="30.0" prefWidth="256.0" styleClass="apply"
-			stylesheets="@application.css" text="Jetzt Anmelden →"
-			textFill="WHITE">
+		<Button fx:id="arnold" layoutX="676.0" layoutY="478.0" mnemonicParsing="false" onAction="#loginregister" prefHeight="30.0" prefWidth="256.0" styleClass="apply" stylesheets="@application.css" text="Jetzt Anmelden →" textFill="WHITE">
 			<font>
 				<Font name="Calibri Light" size="15.0" />
 			</font>
 		</Button>
-		<Label layoutX="130.0" layoutY="140.0" text="Noob"
-			textFill="#bcbbbb">
+		<Label layoutX="130.0" layoutY="140.0" text="Noob" textFill="#bcbbbb">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="27.0" />
 			</font>
 		</Label>
-		<Label layoutX="97.0" layoutY="182.0" text="CHF 500.00"
-			textFill="#6e6b6b">
+		<Label layoutX="97.0" layoutY="182.0" text="CHF 500.00" textFill="#6e6b6b">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="24.0" />
 			</font>
 		</Label>
-		<Label layoutX="97.0" layoutY="209.0" text="12 Monate Laufzeit"
-			textFill="#b2b2b2" />
-		<Separator layoutX="62.0" layoutY="248.0" prefWidth="200.0"
-			scaleY="0.25" style="-fx-background-color: #707070;" />
-		<Label layoutX="90.0" layoutY="264.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="97.0" layoutY="209.0" text="12 Monate Laufzeit" textFill="#b2b2b2" />
+		<Separator layoutX="62.0" layoutY="248.0" prefWidth="200.0" scaleY="0.25" style="-fx-background-color: #707070;" />
+		<Label layoutX="90.0" layoutY="264.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
@@ -109,199 +79,194 @@
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="67.0" layoutY="288.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="67.0" layoutY="288.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="86.0" layoutY="291.0"
-			text="365 Tage  Zutritt im Jahr">
+		<Label layoutX="86.0" layoutY="291.0" text="365 Tage  Zutritt im Jahr">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="48.0" layoutY="315.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="48.0" layoutY="315.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="65.0" layoutY="318.0"
-			text="Krankenkassen-Rückerstattung">
+		<Label layoutX="65.0" layoutY="318.0" text="Krankenkassen-Rückerstattung">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="60.0" layoutY="342.0"
-			text="Täglicher Check-in bis 15:00 Uhr">
+		<Label layoutX="60.0" layoutY="342.0" text="Täglicher Check-in bis 15:00 Uhr">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="41.0" layoutY="340.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="41.0" layoutY="340.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE"
-			height="352.0" layoutX="358.0" layoutY="116.0" stroke="BLACK"
-			strokeType="INSIDE" width="256.0" />
-		<Label layoutX="416.0" layoutY="139.0" text="Hard Worker"
-			textFill="#bcbbbb">
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="358.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+		<Label layoutX="416.0" layoutY="139.0" text="Hard Worker" textFill="#bcbbbb">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="27.0" />
 			</font>
 		</Label>
-		<Label layoutX="420.0" layoutY="175.0" text="CHF 750.00"
-			textFill="#6e6b6b">
+		<Label layoutX="420.0" layoutY="175.0" text="CHF 750.00" textFill="#6e6b6b">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="24.0" />
 			</font>
 		</Label>
-		<Label layoutX="420.0" layoutY="202.0" text="12 Monate Laufzeit"
-			textFill="#b2b2b2" />
-		<Separator layoutX="385.0" layoutY="248.0" prefWidth="200.0"
-			scaleY="0.25" style="-fx-background-color: #707070;" />
-		<Label layoutX="376.0" layoutY="264.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="420.0" layoutY="202.0" text="12 Monate Laufzeit" textFill="#b2b2b2" />
+		<Separator layoutX="385.0" layoutY="248.0" prefWidth="200.0" scaleY="0.25" style="-fx-background-color: #707070;" />
+		<Label layoutX="376.0" layoutY="264.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="395.0" layoutY="266.0"
-			text="Training in der ganzen Schweiz">
+		<Label layoutX="395.0" layoutY="266.0" text="Training in der ganzen Schweiz">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="388.0" layoutY="288.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="388.0" layoutY="288.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="409.0" layoutY="291.0"
-			text="365 Tage Zutritt im Jahr">
+		<Label layoutX="409.0" layoutY="291.0" text="365 Tage Zutritt im Jahr">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="369.0" layoutY="315.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="369.0" layoutY="315.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="388.0" layoutY="318.0"
-			text="Krankenkassen-Rückerstattung">
+		<Label layoutX="388.0" layoutY="318.0" text="Krankenkassen-Rückerstattung">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="418.0" layoutY="342.0"
-			text="24 Stunden Check-in">
+		<Label layoutX="418.0" layoutY="342.0" text="24 Stunden Check-in">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="395.0" layoutY="340.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="395.0" layoutY="340.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE"
-			height="352.0" layoutX="676.0" layoutY="115.0" stroke="BLACK"
-			strokeType="INSIDE" width="256.0" />
-		<Label layoutX="766.0" layoutY="139.0" text="Arnold"
-			textFill="#bcbbbb">
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="352.0" layoutX="676.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="256.0" />
+		<Label layoutX="766.0" layoutY="139.0" text="Arnold" textFill="#bcbbbb">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="27.0" />
 			</font>
 		</Label>
-		<Label layoutX="739.0" layoutY="181.0" text="CHF 999.00"
-			textFill="#6e6b6b">
+		<Label layoutX="739.0" layoutY="181.0" text="CHF 999.00" textFill="#6e6b6b">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="24.0" />
 			</font>
 		</Label>
-		<Label layoutX="739.0" layoutY="208.0" text="24 Monate Laufzeit"
-			textFill="#b2b2b2" />
-		<Separator layoutX="704.0" layoutY="248.0" prefWidth="200.0"
-			scaleY="0.25" style="-fx-background-color: #707070;" />
-		<Label layoutX="688.0" layoutY="264.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="739.0" layoutY="208.0" text="24 Monate Laufzeit" textFill="#b2b2b2" />
+		<Separator layoutX="704.0" layoutY="248.0" prefWidth="200.0" scaleY="0.25" style="-fx-background-color: #707070;" />
+		<Label layoutX="688.0" layoutY="264.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="708.0" layoutY="266.0"
-			text="Training in der ganzen Schweiz">
+		<Label layoutX="708.0" layoutY="266.0" text="Training in der ganzen Schweiz">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="707.0" layoutY="288.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="707.0" layoutY="288.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="728.0" layoutY="291.0"
-			text="365 Tage  Zutritt im Jahr">
+		<Label layoutX="728.0" layoutY="291.0" text="365 Tage  Zutritt im Jahr">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="688.0" layoutY="315.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="688.0" layoutY="315.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="707.0" layoutY="318.0"
-			text="Krankenkassen-Rückerstattung">
+		<Label layoutX="707.0" layoutY="318.0" text="Krankenkassen-Rückerstattung">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="721.0" layoutY="340.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="721.0" layoutY="340.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="415.0" layoutY="364.0"
-			text="Ratenzahlung  möglich">
+		<Label layoutX="415.0" layoutY="364.0" text="Ratenzahlung  möglich">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="395.0" layoutY="362.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="395.0" layoutY="362.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="739.0" layoutY="342.0"
-			text="24 Stunden Check-in">
+		<Label layoutX="739.0" layoutY="342.0" text="24 Stunden Check-in">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="733.0" layoutY="364.0"
-			text="Ratenzahlung  möglich">
+		<Label layoutX="733.0" layoutY="364.0" text="Ratenzahlung  möglich">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="14.0" />
 			</font>
 		</Label>
-		<Label layoutX="714.0" layoutY="362.0" text="✔"
-			textFill="#46cf52">
+		<Label layoutX="714.0" layoutY="362.0" text="✔" textFill="#46cf52">
 			<font>
 				<Font size="14.0" />
 			</font>
 		</Label>
+      <Rectangle fx:id="confirmationcontainer1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="392.0" layoutX="34.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="256.0" />
+      <Label fx:id="containerlabeltitle1" layoutX="71.0" layoutY="141.0" text="System Meldung" textFill="#eb6b6b" visible="false">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="containerlabelmessage1" layoutX="70.0" layoutY="192.0" text="Ihr Vertrag wurde gekündigt" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="confirmationcontainer2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="392.0" layoutX="357.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="256.0" />
+      <Label fx:id="containerlabeltitle2" layoutX="394.0" layoutY="141.0" text="System Meldung" textFill="#eb6b6b" visible="false">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="containerlabelmessage2" layoutX="393.0" layoutY="192.0" text="Ihr Vertrag wurde gekündigt" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="confirmationcontainer3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="392.0" layoutX="675.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="256.0" />
+      <Label fx:id="containerlabeltitle3" layoutX="713.0" layoutY="141.0" text="System Meldung" textFill="#eb6b6b" visible="false">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="containerlabelmessage3" layoutX="712.0" layoutY="192.0" text="Ihr Vertrag wurde gekündigt" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
 	</children>
 </AnchorPane>
