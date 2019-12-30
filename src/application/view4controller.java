@@ -14,17 +14,17 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class view4controller {
-	
+
 	private double xOffset = 0;
 	private double yOffset = 0;
 	private String contracttype;
-	
+
 	@FXML
 	private AnchorPane anchorpane;
-	
+
 	@FXML
 	private ListView<String> listview;
-	
+
 	@FXML
 	protected void myContract(ActionEvent event) {
 
@@ -61,23 +61,32 @@ public class view4controller {
 		stage.setScene(scene);
 
 		stage.show();
-		
+
 		view3controller v3 = fxmlLoader.<view3controller>getController();
 		v3.setContracttype(this.contracttype);
 	}
-	
+
 	public void getContracttyype(String contracttype) {
 		this.contracttype = contracttype;
 	}
-	
+
 	public void addElement() {
 		listview.getItems().add("some new element");
 	}
-	
+
 	public void removeElement() {
+		final int selectedItem = listview.getSelectionModel().getSelectedIndex();
+		listview.getItems().remove(selectedItem);
+	}
+	
+	public void editElement() {
 
 	}
 	
+	public void getNewValue() {
+		
+	}
+
 	public void closeOperation() {
 		view1controller v1 = new view1controller();
 		v1.closeOperation();

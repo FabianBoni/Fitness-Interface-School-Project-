@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -62,11 +64,11 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button onAction="#addElement" mnemonicParsing="false" styleClass="keybuttons" stylesheets="@application.css" text="✚">
+            <Button mnemonicParsing="false" onAction="#addElement" styleClass="keybuttons" stylesheets="@application.css" text="✚">
                <font>
                   <Font name="Microsoft New Tai Lue" size="24.0" />
                </font></Button>
-            <Button onAction="#removeElement" mnemonicParsing="false" styleClass="keybuttons" stylesheets="@application.css" text="✘" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#removeElement" styleClass="keybuttons" stylesheets="@application.css" text="✘" GridPane.rowIndex="1">
                <font>
                   <Font name="Microsoft New Tai Lue Bold" size="24.0" />
                </font>
@@ -78,5 +80,10 @@
             </Button>
          </children>
       </GridPane>
+      <ImageView fitHeight="513.0" fitWidth="321.0" layoutX="641.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/view4picture.PNG" />
+         </image>
+      </ImageView>
 	</children>
 </AnchorPane>
