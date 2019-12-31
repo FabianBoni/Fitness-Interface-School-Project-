@@ -133,6 +133,58 @@ public class view1controller {
 			}, 5000);
 		}
 	}
+	
+	public void pauseContract() {
+		if (this.contracttype.equals("Noob")) {
+			confirmationcontainer1.setVisible(true);
+			containerlabelmessage1.setVisible(true);
+			containerlabeltitle1.setVisible(true);
+			containerlabelmessage1.setText("Ihr Vertrag wurde pausiert");
+
+			new java.util.Timer().schedule(new java.util.TimerTask() {
+				@Override
+				public void run() {
+					confirmationcontainer1.setVisible(false);
+					containerlabelmessage1.setVisible(false);
+					containerlabeltitle1.setVisible(false);
+				}
+			}, 5000);
+		}
+		if (this.contracttype.equals("Hardworker")) {
+			confirmationcontainer2.setVisible(true);
+			containerlabelmessage2.setVisible(true);
+			containerlabeltitle2.setVisible(true);
+			containerlabelmessage2.setText("Ihr Vertrag wurde pausiert");
+
+			new java.util.Timer().schedule(new java.util.TimerTask() {
+				@Override
+				public void run() {
+					confirmationcontainer2.setVisible(false);
+					containerlabelmessage2.setVisible(false);
+					containerlabeltitle2.setVisible(false);
+				}
+			}, 5000);
+		}
+		if (this.contracttype.equals("Arnold")) {
+			confirmationcontainer3.setVisible(true);
+			containerlabelmessage3.setVisible(true);
+			containerlabeltitle3.setVisible(true);
+			containerlabelmessage3.setText("Ihr Vertrag wurde pausiert");
+
+			new java.util.Timer().schedule(new java.util.TimerTask() {
+				@Override
+				public void run() {
+					confirmationcontainer3.setVisible(false);
+					containerlabelmessage3.setVisible(false);
+					containerlabeltitle3.setVisible(false);
+				}
+			}, 5000);
+		}
+	}
+	
+	public void editContract() {
+		
+	}
 
 	public void closeOperation() {
 		System.exit(0);

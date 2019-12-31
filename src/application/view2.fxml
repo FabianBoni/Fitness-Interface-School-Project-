@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -13,24 +14,15 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane" maxHeight="-Infinity"
-	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-	prefHeight="540.0" prefWidth="970.0"
-	style="-fx-background-color: #423C3C;"
-	xmlns="http://javafx.com/javafx/11.0.1"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="application.view2controller">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="970.0" style="-fx-background-color: #423C3C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view2controller">
 	<children>
 		<GridPane layoutX="16.0" prefHeight="66.0" prefWidth="954.0">
 			<columnConstraints>
-				<ColumnConstraints halignment="LEFT"
-					hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-				<ColumnConstraints halignment="RIGHT"
-					hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 			</columnConstraints>
 			<rowConstraints>
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 			</rowConstraints>
 			<children>
 				<Label text="gymbone.ch" textFill="WHITE">
@@ -41,9 +33,7 @@
 						<Insets left="50.0" top="10.0" />
 					</GridPane.margin>
 				</Label>
-				<Button id="closebutton" mnemonicParsing="false"
-					onAction="#closeOperation" stylesheets="@application.css" text="X"
-					GridPane.columnIndex="1">
+				<Button id="closebutton" mnemonicParsing="false" onAction="#closeOperation" stylesheets="@application.css" text="X" GridPane.columnIndex="1">
 					<font>
 						<Font name="Microsoft New Tai Lue" size="27.0" />
 					</font>
@@ -53,49 +43,31 @@
 				</Button>
 			</children>
 		</GridPane>
-		<Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0"
-			scaleY="0.25" style="-fx-background-color: white;" />
-		<ImageView fitHeight="405.0" fitWidth="338.0" layoutX="16.0"
-			layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+		<Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0" scaleY="0.25" style="-fx-background-color: white;" />
+		<ImageView fitHeight="405.0" fitWidth="338.0" layoutX="16.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
 			<image>
 				<Image url="@img/login.png" />
 			</image>
 		</ImageView>
-		<Label fx:id="formlabel" layoutX="493.0" layoutY="147.0"
-			prefHeight="91.0" prefWidth="271.0" text="Login" textFill="WHITE">
+		<Label fx:id="formlabel" layoutX="493.0" layoutY="147.0" prefHeight="91.0" prefWidth="271.0" text="Login" textFill="WHITE">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="72.0" />
 			</font>
 		</Label>
-		<TextField fx:id="prename" layoutX="493.0" layoutY="258.0"
-			prefHeight="25.0" prefWidth="264.0" promptText="Vorname"
-			styleClass="textfield" stylesheets="@application.css" />
-		<TextField fx:id="name" layoutX="493.0" layoutY="258.0"
-			prefHeight="25.0" prefWidth="264.0" promptText="Nachname"
-			styleClass="textfield" stylesheets="@application.css" />
-		<TextField fx:id="birthdate" layoutX="493.0" layoutY="258.0"
-			prefHeight="25.0" prefWidth="264.0" promptText="Geburtsdatum"
-			styleClass="textfield" stylesheets="@application.css" />
-		<TextField fx:id="username" layoutX="493.0" layoutY="258.0"
-			prefHeight="25.0" prefWidth="264.0" promptText="Benutzername"
-			styleClass="textfield" stylesheets="@application.css" />
-		<TextField fx:id="password" layoutX="493.0" layoutY="299.0"
-			prefHeight="25.0" prefWidth="264.0" promptText="Passwort"
-			styleClass="textfield" stylesheets="@application.css" />
-		<Button fx:id="redirect" layoutX="493.0" layoutY="333.0"
-			mnemonicParsing="false" onAction="#register"
-			styleClass="registerloginbutton" stylesheets="@application.css"
-			text="oder Registrieren">
+		<TextField fx:id="prename" layoutX="493.0" layoutY="258.0" prefHeight="25.0" prefWidth="264.0" promptText="Vorname" styleClass="textfield" stylesheets="@application.css" />
+		<TextField fx:id="name" layoutX="493.0" layoutY="258.0" prefHeight="25.0" prefWidth="264.0" promptText="Nachname" styleClass="textfield" stylesheets="@application.css" />
+		<TextField fx:id="birthdate" layoutX="493.0" layoutY="258.0" prefHeight="25.0" prefWidth="264.0" promptText="Geburtsdatum" styleClass="textfield" stylesheets="@application.css" />
+		<TextField fx:id="username" layoutX="493.0" layoutY="258.0" prefHeight="25.0" prefWidth="264.0" promptText="Benutzername" styleClass="textfield" stylesheets="@application.css" />
+		<Button fx:id="redirect" layoutX="493.0" layoutY="333.0" mnemonicParsing="false" onAction="#register" styleClass="registerloginbutton" stylesheets="@application.css" text="oder Registrieren">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="12.0" />
 			</font>
 		</Button>
-		<Button id="applybutton" fx:id="applybutton" layoutX="636.0"
-			layoutY="328.0" mnemonicParsing="false" onAction="#loginregister"
-			stylesheets="@application.css" text="Einloggen ➠">
+		<Button id="applybutton" fx:id="applybutton" layoutX="636.0" layoutY="328.0" mnemonicParsing="false" onAction="#loginregister" stylesheets="@application.css" text="Einloggen ➠">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="17.0" />
 			</font>
 		</Button>
+      <PasswordField fx:id="password" layoutX="493.0" layoutY="300.0" prefHeight="25.0" prefWidth="264.0" promptText="Passwort" styleClass="textfield" stylesheets="@application.css" />
 	</children>
 </AnchorPane>

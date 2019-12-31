@@ -87,7 +87,7 @@
 				<Font name="Microsoft New Tai Lue" size="20.0" />
 			</font>
 		</Label>
-		<Button fx:id="pausecontract" layoutX="63.0" layoutY="381.0" mnemonicParsing="false" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag pausieren">
+		<Button onAction="#pause" fx:id="pausecontract" layoutX="63.0" layoutY="381.0" mnemonicParsing="false" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag pausieren">
 			<opaqueInsets>
 				<Insets />
 			</opaqueInsets>
@@ -95,7 +95,7 @@
 				<Font size="20.0" />
 			</font>
 		</Button>
-		<Button fx:id="changecontract" layoutX="270.0" layoutY="381.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="187.0" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag ändern">
+		<Button onAction="#edit" fx:id="changecontract" layoutX="270.0" layoutY="381.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="187.0" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag ändern">
 			<opaqueInsets>
 				<Insets />
 			</opaqueInsets>
@@ -137,7 +137,7 @@
             <Insets left="5.0" right="5.0" top="1.0" />
          </padding>
       </Button>
-      <Button fx:id="cancle" layoutX="493.0" layoutY="295.0" mnemonicParsing="false" styleClass="confirmationbuttons" stylesheets="@application.css" text="Abbrechen" visible="false">
+      <Button onAction="#cancleOrder" fx:id="cancle" layoutX="493.0" layoutY="295.0" mnemonicParsing="false" styleClass="confirmationbuttons" stylesheets="@application.css" text="Abbrechen" visible="false">
          <font>
             <Font name="Microsoft New Tai Lue" size="20.0" />
          </font>

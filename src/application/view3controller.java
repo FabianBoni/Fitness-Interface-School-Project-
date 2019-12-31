@@ -72,7 +72,7 @@ public class view3controller {
 		stage.setScene(scene);
 
 		stage.show();
-		
+
 		view4controller v4 = fxmlLoader.<view4controller>getController();
 		v4.getContracttyype(this.contract);
 	}
@@ -114,9 +114,18 @@ public class view3controller {
 		stage.show();
 
 		view1controller v1 = fxmlLoader.<view1controller>getController();
-
-		v1.getContracttype(this.contract);
-		v1.cancelledContract();
+		
+		if(canclecontract.getText().equals("Pausieren")) {
+			v1.getContracttype(this.contract);
+			v1.pauseContract();
+		}
+		if(canclecontract.getText().equals("Kündigen")) {
+			v1.getContracttype(this.contract);
+			v1.cancelledContract();
+		}
+		if(canclecontract.getText().equals("Auswahl")) {
+			v1.editContract(); 
+		}
 	}
 
 	public void setContracttype(String Contracttype) {
@@ -148,18 +157,52 @@ public class view3controller {
 		contractimage.setEffect(blur);
 		attention.setVisible(true);
 		confirmationinfo.setVisible(true);
+		confirmationinfo.setText("Wollen Sie den Vertrag wirklich kündigen?");
 		canclecontract.setVisible(true);
+		canclecontract.setText("Kündigen");
 		cancle.setVisible(true);
 	}
 
 	public void edit() {
-
+		cancle();
+		confirmationinfo.setText("Wollen Sie den Vertrag ändern?");
+		confirmationinfo.setLayoutX(270);
+		canclecontract.setLayoutX(282);
+		canclecontract.setText("Auswahl");
 	}
 
 	public void pause() {
-
+		cancle();
+		confirmationinfo.setText("Wollen Sie den Vertrag pausieren?");
+		confirmationinfo.setLayoutX(250);
+		canclecontract.setLayoutX(282);
+		canclecontract.setText("Pausieren");
 	}
 
+	public void cancleOrder() {
+		traininghistory.setDisable(false);
+		canclecontractoption.setDisable(false);
+		changecontract.setDisable(false);
+		pausecontract.setDisable(false);
+		attention.setVisible(false);
+		confirmationinfo.setVisible(false);
+		canclecontract.setVisible(false);
+		cancle.setVisible(false);
+		traininghistory.setEffect(null);
+		canclecontractoption.setEffect(null);
+		changecontract.setEffect(null);
+		pausecontract.setEffect(null);
+		contractlabels1.setEffect(null);
+		contractlabels2.setEffect(null);
+		contractlabels3.setEffect(null);
+		contractlabels4.setEffect(null);
+		contractlabels5.setEffect(null);
+		contractlabels6.setEffect(null);
+		contractnumber.setEffect(null);
+		contracttype.setEffect(null);
+		contractimage.setEffect(null);
+	}
+	
 	public void closeOperation() {
 		view1controller v1 = new view1controller();
 		v1.closeOperation();
