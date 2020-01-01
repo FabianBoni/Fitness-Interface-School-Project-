@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.util.Random;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -114,23 +115,35 @@ public class view3controller {
 		stage.show();
 
 		view1controller v1 = fxmlLoader.<view1controller>getController();
-		
-		if(canclecontract.getText().equals("Pausieren")) {
+
+		if (canclecontract.getText().equals("Pausieren")) {
 			v1.getContracttype(this.contract);
 			v1.pauseContract();
 		}
-		if(canclecontract.getText().equals("Kündigen")) {
+		if (canclecontract.getText().equals("Kündigen")) {
 			v1.getContracttype(this.contract);
 			v1.cancelledContract();
 		}
-		if(canclecontract.getText().equals("Auswahl")) {
-			v1.editContract(); 
+		if (canclecontract.getText().equals("Auswahl")) {
+			v1.editContract();
 		}
 	}
 
 	public void setContracttype(String Contracttype) {
 		this.contract = Character.toUpperCase(Contracttype.charAt(0)) + Contracttype.substring(1);
 		this.contracttype.setText(this.contract + " " + "-");
+
+		if (Contracttype.equals("hardworker")) {
+			contractnumber.setLayoutX(190);
+		}
+
+		if (Contracttype.equals("arnold")) {
+			contractnumber.setLayoutX(145);
+		}
+	}
+
+	public void setContractNumber() {
+		contractnumber.setText("" + getRandomNumber(1000, 9999));
 	}
 
 	public void cancle() {
@@ -202,7 +215,12 @@ public class view3controller {
 		contracttype.setEffect(null);
 		contractimage.setEffect(null);
 	}
-	
+
+	public static int getRandomNumber(int min, int max) {
+		Random r = new Random();
+		return r.nextInt((max - min) + 1) + min;
+	}
+
 	public void closeOperation() {
 		view1controller v1 = new view1controller();
 		v1.closeOperation();

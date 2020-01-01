@@ -69,5 +69,10 @@
 			</font>
 		</Button>
       <PasswordField fx:id="password" layoutX="493.0" layoutY="300.0" prefHeight="25.0" prefWidth="264.0" promptText="Passwort" styleClass="textfield" stylesheets="@application.css" />
+      <Label fx:id="isEmptyLabel" layoutX="490.0" layoutY="460.0" prefHeight="38.0" prefWidth="400.0" text="Bitte die erforderlichen Felder ausfüllen!" textFill="#ff6464" visible="false">
+         <font>
+            <Font name="Microsoft New Tai Lue" size="22.0" />
+         </font>
+      </Label>
 	</children>
 </AnchorPane>

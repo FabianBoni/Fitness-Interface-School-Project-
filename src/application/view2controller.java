@@ -23,13 +23,13 @@ public class view2controller {
 	private String id;
 	private double xOffset = 0;
 	private double yOffset = 0;
-	private boolean passwordb = false, usernameb = false;
+	private boolean passwordb = false, usernameb = false, login = false, register = false;
 
 	@FXML
 	private AnchorPane anchorpane;
 
 	@FXML
-	private Label formlabel;
+	private Label formlabel, isEmptyLabel;
 
 	@FXML
 	private Button redirect, applybutton;
@@ -54,6 +54,9 @@ public class view2controller {
 			birthdate.setVisible(false);
 			applybutton.setLayoutY(333);
 			applybutton.setText("Einloggen ➠");
+			if (isEmptyLabel.isVisible()) {
+				isEmptyLabel.setVisible(false);
+			}
 		} else {
 			formlabel.setText("Register");
 			formlabel.setLayoutY(121);
@@ -70,100 +73,113 @@ public class view2controller {
 			redirect.setText("oder einloggen");
 			applybutton.setLayoutY(430);
 			applybutton.setText("Registrieren ➠");
+			if (isEmptyLabel.isVisible()) {
+				isEmptyLabel.setVisible(false);
+			}
 		}
 	}
 
 	@FXML
 	protected void loginregister(ActionEvent event) throws IOException {
-		
-		applybutton.setDisable(true);
-		
-		Parent root = null;
 
-		Stage stage;
-
-		stage = (Stage) anchorpane.getScene().getWindow();
-
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/view3.fxml"));
-
-		try {
-			root = (Parent) fxmlLoader.load();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		Scene scene = new Scene(root);
-
-		root.setOnMousePressed(new EventHandler<MouseEvent>() {
-			public void handle(MouseEvent event) {
-				xOffset = event.getSceneX();
-				yOffset = event.getSceneY();
-			}
-		});
-		root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) {
-				stage.setX(event.getScreenX() - xOffset);
-				stage.setY(event.getScreenY() - yOffset);
-			}
-		});
-
-		view3controller v3 = fxmlLoader.<view3controller>getController();
-
-		v3.setContracttype(getButton());
-
-		if (applybutton.getText().equals("Registrieren ➠")) {
-			FileWriter fw = new FileWriter("database.txt");
-			BufferedWriter bw = new BufferedWriter(fw);
-
+		if (prename.isVisible() && name.isVisible() && username.isVisible() && birthdate.isVisible()
+				&& password.isVisible()) {
 			if (prename.getText().trim().isEmpty() || name.getText().trim().isEmpty()
 					|| username.getText().trim().isEmpty() || birthdate.getText().trim().isEmpty()
 					|| password.getText().trim().isEmpty()) {
+				isEmptyLabel.setVisible(true);
 			} else {
-				applybutton.setDisable(false);
+				this.register = true;
 			}
+		}
 
-			bw.write("Vorname: " + prename.getText());
-			bw.newLine();
-			bw.write("Nachname: " + name.getText());
-			bw.newLine();
-			bw.write("Benutzername: " + username.getText());
-			bw.newLine();
-			bw.write("Geburtsdatum: " + birthdate.getText());
-			bw.newLine();
-			bw.write("Passwort: " + password.getText());
-
-			bw.close();
-		} else {
+		if (username.isVisible() && password.isVisible()) {
 			if (username.getText().trim().isEmpty() || password.getText().trim().isEmpty()) {
-
+				isEmptyLabel.setVisible(true);
 			} else {
-				applybutton.setDisable(false);
+				this.login = true;
+			}
+		}
+		if (this.login == true || this.register == true) {
+
+			Parent root = null;
+
+			Stage stage;
+
+			stage = (Stage) anchorpane.getScene().getWindow();
+
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/view3.fxml"));
+
+			try {
+				root = (Parent) fxmlLoader.load();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 
-			File file = new File("database.txt");
-			Scanner Reader = new Scanner(file);
-			while (Reader.hasNextLine()) {
-				String data = Reader.nextLine();
-				if (data.contains(username.getText())) {
-					this.usernameb = true;
-				}
+			Scene scene = new Scene(root);
 
-				if (data.contains(password.getText())) {
-					this.passwordb = true;
+			root.setOnMousePressed(new EventHandler<MouseEvent>() {
+				public void handle(MouseEvent event) {
+					xOffset = event.getSceneX();
+					yOffset = event.getSceneY();
 				}
+			});
+			root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setX(event.getScreenX() - xOffset);
+					stage.setY(event.getScreenY() - yOffset);
+				}
+			});
+
+			view3controller v3 = fxmlLoader.<view3controller>getController();
+			
+			v3.setContractNumber();
+
+			v3.setContracttype(getButton());
+
+			if (applybutton.getText().equals("Registrieren ➠")) {
+				FileWriter fw = new FileWriter("database.txt");
+				BufferedWriter bw = new BufferedWriter(fw);
+
+				bw.write("Vorname: " + prename.getText());
+				bw.newLine();
+				bw.write("Nachname: " + name.getText());
+				bw.newLine();
+				bw.write("Benutzername: " + username.getText());
+				bw.newLine();
+				bw.write("Geburtsdatum: " + birthdate.getText());
+				bw.newLine();
+				bw.write("Passwort: " + password.getText());
+
+				bw.close();
+			} else {
+
+				File file = new File("database.txt");
+				Scanner Reader = new Scanner(file);
+				while (Reader.hasNextLine()) {
+					String data = Reader.nextLine();
+					if (data.contains(username.getText())) {
+						this.usernameb = true;
+					}
+
+					if (data.contains(password.getText())) {
+						this.passwordb = true;
+					}
+				}
+				Reader.close();
 			}
-			Reader.close();
-		}
 
-		if (this.usernameb == true && this.passwordb == true) {
-			stage.setScene(scene);
-			stage.show();
-		}
-		if (this.usernameb == false && this.passwordb == false) {
-			System.out.println("wrong password");
-		}
+			if (this.usernameb == true && this.passwordb == true) {
+				stage.setScene(scene);
+				stage.show();
+			}
+			if (this.usernameb == false && this.passwordb == false) {
+				isEmptyLabel.setVisible(true);
+				isEmptyLabel.setText("Falscher Benutzername oder Passwort!");
+			}
 
+		}
 	}
 
 	public void closeOperation() {
