@@ -134,7 +134,7 @@ public class view2controller {
 			});
 
 			view3controller v3 = fxmlLoader.<view3controller>getController();
-			
+
 			v3.setContractNumber(getRandomNumber(1000, 9999));
 
 			v3.setContracttype(getButton());
@@ -174,20 +174,19 @@ public class view2controller {
 			if (this.usernameb == true && this.passwordb == true) {
 				stage.setScene(scene);
 				stage.show();
-			}
-			if (this.usernameb == false && this.passwordb == false) {
+			} else {
 				isEmptyLabel.setVisible(true);
 				isEmptyLabel.setText("Falscher Benutzername oder Passwort!");
 			}
 
 		}
 	}
-	
+
 	public static int getRandomNumber(int min, int max) {
 		Random r = new Random();
 		return r.nextInt((max - min) + 1) + min;
 	}
-	
+
 	public void showInfo() {
 		if (infolabel.isVisible()) {
 			infolabel.setVisible(false);

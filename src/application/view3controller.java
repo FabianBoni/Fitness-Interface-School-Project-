@@ -242,7 +242,7 @@ public class view3controller {
 		contracttype.setEffect(null);
 		contractimage.setEffect(null);
 	}
-	
+
 	public void showInfo() {
 		if (infolabel.isVisible()) {
 			infolabel.setVisible(false);

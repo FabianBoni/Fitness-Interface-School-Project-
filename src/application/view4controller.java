@@ -23,7 +23,7 @@ public class view4controller {
 
 	@FXML
 	private AnchorPane anchorpane;
-	
+
 	@FXML
 	private Label infolabel;
 
@@ -77,7 +77,7 @@ public class view4controller {
 	public void getContracttyype(String contracttype) {
 		this.contracttype = contracttype;
 	}
-	
+
 	public void getContractNumber(int cnumber) {
 		this.contractnumber = cnumber;
 	}
@@ -90,15 +90,15 @@ public class view4controller {
 		final int selectedItem = listview.getSelectionModel().getSelectedIndex();
 		listview.getItems().remove(selectedItem);
 	}
-	
+
 	public void editElement() {
 
 	}
-	
+
 	public void getNewValue() {
-		
+
 	}
-	
+
 	public void showInfo() {
 		if (infolabel.isVisible()) {
 			infolabel.setVisible(false);

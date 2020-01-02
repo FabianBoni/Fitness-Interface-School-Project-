@@ -13,15 +13,24 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="970.0" style="-fx-background-color: #423C3C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view3controller">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="540.0" prefWidth="970.0"
+	style="-fx-background-color: #423C3C;"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.view3controller">
 	<children>
 		<GridPane layoutX="16.0" prefHeight="66.0" prefWidth="954.0">
 			<columnConstraints>
-				<ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-				<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints halignment="LEFT"
+					hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints halignment="RIGHT"
+					hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 			</columnConstraints>
 			<rowConstraints>
-				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
 			</rowConstraints>
 			<children>
 				<Label text="gymbone.ch" textFill="WHITE">
@@ -32,7 +41,9 @@
 						<Insets left="50.0" top="10.0" />
 					</GridPane.margin>
 				</Label>
-				<Button id="closebutton" mnemonicParsing="false" onAction="#closeOperation" stylesheets="@application.css" text="X" GridPane.columnIndex="1">
+				<Button id="closebutton" mnemonicParsing="false"
+					onAction="#closeOperation" stylesheets="@application.css" text="X"
+					GridPane.columnIndex="1">
 					<font>
 						<Font name="Microsoft New Tai Lue" size="27.0" />
 					</font>
@@ -42,53 +53,66 @@
 				</Button>
 			</children>
 		</GridPane>
-		<Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0" scaleY="0.25" style="-fx-background-color: white;" />
-		<ImageView fx:id="contractimage" fitHeight="425.0" fitWidth="568.0" layoutX="404.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+		<Separator layoutY="73.0" prefHeight="0.0" prefWidth="970.0"
+			scaleY="0.25" style="-fx-background-color: white;" />
+		<ImageView fx:id="contractimage" fitHeight="425.0"
+			fitWidth="568.0" layoutX="404.0" layoutY="115.0" pickOnBounds="true"
+			preserveRatio="true">
 			<image>
 				<Image url="@img/vertrag.png" />
 			</image>
 		</ImageView>
-		<Label fx:id="contractlabels1" layoutX="67.0" layoutY="89.0" text="MEIN VERTRAG" textFill="WHITE">
+		<Label fx:id="contractlabels1" layoutX="67.0" layoutY="89.0"
+			text="MEIN VERTRAG" textFill="WHITE">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="35.0" />
 			</font>
 		</Label>
-		<Label fx:id="contractlabels2" layoutX="67.0" layoutY="150.0" text="Vertrag" textFill="WHITE">
+		<Label fx:id="contractlabels2" layoutX="67.0" layoutY="150.0"
+			text="Vertrag" textFill="WHITE">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="25.0" />
 			</font>
 		</Label>
-		<Label fx:id="contracttype" layoutX="67.0" layoutY="180.0" text="XXXX" textFill="#838383">
+		<Label fx:id="contracttype" layoutX="67.0" layoutY="180.0"
+			text="XXXX" textFill="#838383">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="20.0" />
 			</font>
 		</Label>
-		<Label fx:id="contractnumber" layoutX="132.0" layoutY="180.0" text="XXXX" textFill="#98ff53">
+		<Label fx:id="contractnumber" layoutX="132.0" layoutY="180.0"
+			text="XXXX" textFill="#98ff53">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="20.0" />
 			</font>
 		</Label>
-		<Label fx:id="contractlabels3" layoutX="67.0" layoutY="227.0" text="Vertragsbeginn" textFill="WHITE">
+		<Label fx:id="contractlabels3" layoutX="67.0" layoutY="227.0"
+			text="Vertragsbeginn" textFill="WHITE">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="25.0" />
 			</font>
 		</Label>
-		<Label fx:id="contractlabels4" layoutX="67.0" layoutY="255.0" text="dd.mm.yyyy" textFill="#838383">
+		<Label fx:id="contractlabels4" layoutX="67.0" layoutY="255.0"
+			text="dd.mm.yyyy" textFill="#838383">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="20.0" />
 			</font>
 		</Label>
-		<Label fx:id="contractlabels5" layoutX="67.0" layoutY="307.0" text="Trainingsbeginn" textFill="WHITE">
+		<Label fx:id="contractlabels5" layoutX="67.0" layoutY="307.0"
+			text="Trainingsbeginn" textFill="WHITE">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="25.0" />
 			</font>
 		</Label>
-		<Label fx:id="contractlabels6" layoutX="67.0" layoutY="336.0" text="dd.mm.yyyy" textFill="#838383">
+		<Label fx:id="contractlabels6" layoutX="67.0" layoutY="336.0"
+			text="dd.mm.yyyy" textFill="#838383">
 			<font>
 				<Font name="Microsoft New Tai Lue" size="20.0" />
 			</font>
 		</Label>
-		<Button fx:id="pausecontract" layoutX="63.0" layoutY="381.0" mnemonicParsing="false" onAction="#pause" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag pausieren">
+		<Button fx:id="pausecontract" layoutX="63.0" layoutY="381.0"
+			mnemonicParsing="false" onAction="#pause" styleClass="optionsbutton"
+			stylesheets="@application.css" text="Vertrag pausieren">
 			<opaqueInsets>
 				<Insets />
 			</opaqueInsets>
@@ -96,7 +120,10 @@
 				<Font size="20.0" />
 			</font>
 		</Button>
-		<Button fx:id="changecontract" layoutX="270.0" layoutY="381.0" mnemonicParsing="false" onAction="#edit" prefHeight="46.0" prefWidth="187.0" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag ändern">
+		<Button fx:id="changecontract" layoutX="270.0" layoutY="381.0"
+			mnemonicParsing="false" onAction="#edit" prefHeight="46.0"
+			prefWidth="187.0" styleClass="optionsbutton"
+			stylesheets="@application.css" text="Vertrag ändern">
 			<opaqueInsets>
 				<Insets />
 			</opaqueInsets>
@@ -104,7 +131,10 @@
 				<Font size="20.0" />
 			</font>
 		</Button>
-		<Button fx:id="canclecontractoption" layoutX="63.0" layoutY="441.0" mnemonicParsing="false" onAction="#cancle" prefHeight="46.0" prefWidth="187.0" styleClass="optionsbutton" stylesheets="@application.css" text="Vertrag kündigen">
+		<Button fx:id="canclecontractoption" layoutX="63.0"
+			layoutY="441.0" mnemonicParsing="false" onAction="#cancle"
+			prefHeight="46.0" prefWidth="187.0" styleClass="optionsbutton"
+			stylesheets="@application.css" text="Vertrag kündigen">
 			<opaqueInsets>
 				<Insets />
 			</opaqueInsets>
@@ -112,7 +142,10 @@
 				<Font size="20.0" />
 			</font>
 		</Button>
-		<Button fx:id="traininghistory" layoutX="270.0" layoutY="441.0" mnemonicParsing="false" onAction="#trainingHistory" prefHeight="46.0" prefWidth="227.0" styleClass="optionsbutton" stylesheets="@application.css" text="Mein Trainingsverlauf">
+		<Button fx:id="traininghistory" layoutX="270.0" layoutY="441.0"
+			mnemonicParsing="false" onAction="#trainingHistory" prefHeight="46.0"
+			prefWidth="227.0" styleClass="optionsbutton"
+			stylesheets="@application.css" text="Mein Trainingsverlauf">
 			<opaqueInsets>
 				<Insets />
 			</opaqueInsets>
@@ -120,34 +153,48 @@
 				<Font size="20.0" />
 			</font>
 		</Button>
-      <Label fx:id="confirmationinfo" layoutX="225.0" layoutY="236.0" text="Wollen Sie den Vertrag wirklich kündigen?" textFill="WHITE" visible="false">
-         <font>
-            <Font name="Microsoft New Tai Lue" size="25.0" />
-         </font>
-      </Label>
-      <Label fx:id="attention" layoutX="434.0" layoutY="161.0" text="⚠" textFill="WHITE" visible="false">
-         <font>
-            <Font size="47.0" />
-         </font>
-      </Label>
-      <Button fx:id="canclecontract" layoutX="282.0" layoutY="295.0" mnemonicParsing="false" onAction="#startPage" styleClass="confirmationbuttons" stylesheets="@application.css" text="Kündigen" visible="false">
-         <font>
-            <Font name="Microsoft New Tai Lue" size="20.0" />
-         </font>
-         <padding>
-            <Insets left="5.0" right="5.0" top="1.0" />
-         </padding>
-      </Button>
-      <Button fx:id="cancle" layoutX="493.0" layoutY="295.0" mnemonicParsing="false" onAction="#cancleOrder" styleClass="confirmationbuttons" stylesheets="@application.css" text="Abbrechen" visible="false">
-         <font>
-            <Font name="Microsoft New Tai Lue" size="20.0" />
-         </font>
-      </Button>
-      <Label fx:id="infolabel" layoutX="599.0" layoutY="116.0" text="🛈Hier kannst du deinen Vertrag verwalten" textFill="WHITE" visible="false">
-         <font>
-            <Font name="System Italic" size="18.0" />
-         </font>
-      </Label>
-      <ToggleButton layoutX="841.0" layoutY="85.0" mnemonicParsing="false" onAction="#showInfo" styleClass="informationbutton" stylesheets="@application.css" text="🛈Hilfestellung" />
+		<Label fx:id="confirmationinfo" layoutX="225.0" layoutY="236.0"
+			text="Wollen Sie den Vertrag wirklich kündigen?" textFill="WHITE"
+			visible="false">
+			<font>
+				<Font name="Microsoft New Tai Lue" size="25.0" />
+			</font>
+		</Label>
+		<Label fx:id="attention" layoutX="434.0" layoutY="161.0"
+			text="⚠" textFill="WHITE" visible="false">
+			<font>
+				<Font size="47.0" />
+			</font>
+		</Label>
+		<Button fx:id="canclecontract" layoutX="282.0" layoutY="295.0"
+			mnemonicParsing="false" onAction="#startPage"
+			styleClass="confirmationbuttons" stylesheets="@application.css"
+			text="Kündigen" visible="false">
+			<font>
+				<Font name="Microsoft New Tai Lue" size="20.0" />
+			</font>
+			<padding>
+				<Insets left="5.0" right="5.0" top="1.0" />
+			</padding>
+		</Button>
+		<Button fx:id="cancle" layoutX="493.0" layoutY="295.0"
+			mnemonicParsing="false" onAction="#cancleOrder"
+			styleClass="confirmationbuttons" stylesheets="@application.css"
+			text="Abbrechen" visible="false">
+			<font>
+				<Font name="Microsoft New Tai Lue" size="20.0" />
+			</font>
+		</Button>
+		<Label fx:id="infolabel" layoutX="599.0" layoutY="116.0"
+			text="🛈Hier kannst du deinen Vertrag verwalten" textFill="WHITE"
+			visible="false">
+			<font>
+				<Font name="System Italic" size="18.0" />
+			</font>
+		</Label>
+		<ToggleButton layoutX="841.0" layoutY="85.0"
+			mnemonicParsing="false" onAction="#showInfo"
+			styleClass="informationbutton" stylesheets="@application.css"
+			text="🛈Hilfestellung" />
 	</children>
 </AnchorPane>

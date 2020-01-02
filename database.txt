@@ -1,5 +1,5 @@
-Vorname: Fabian
-Nachname: Boni
-Benutzername: fabu
-Geburtsdatum: 06.09.2001
+Vorname: 
+Nachname: 
+Benutzername: faebu
+Geburtsdatum: 
 Passwort: 2001fabonix
