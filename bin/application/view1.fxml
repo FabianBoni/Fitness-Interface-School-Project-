@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -268,5 +269,11 @@
             <Font name="System Italic" size="15.0" />
          </font>
       </Label>
+      <Label fx:id="infolabel" layoutX="34.0" layoutY="84.0" text="🛈 Wähle hier dein gewünschtes Abonnement aus" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <ToggleButton layoutX="841.0" layoutY="85.0" mnemonicParsing="false" onAction="#showInfo" styleClass="informationbutton" stylesheets="@application.css" text="🛈Hilfestellung" />
 	</children>
 </AnchorPane>

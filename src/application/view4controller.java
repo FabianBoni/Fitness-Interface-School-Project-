@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -18,9 +19,13 @@ public class view4controller {
 	private double xOffset = 0;
 	private double yOffset = 0;
 	private String contracttype;
+	private int contractnumber;
 
 	@FXML
 	private AnchorPane anchorpane;
+	
+	@FXML
+	private Label infolabel;
 
 	@FXML
 	private ListView<String> listview;
@@ -64,10 +69,17 @@ public class view4controller {
 
 		view3controller v3 = fxmlLoader.<view3controller>getController();
 		v3.setContracttype(this.contracttype);
+		v3.setDate();
+		v3.setTrainingDate();
+		v3.setContractNumber(this.contractnumber);
 	}
 
 	public void getContracttyype(String contracttype) {
 		this.contracttype = contracttype;
+	}
+	
+	public void getContractNumber(int cnumber) {
+		this.contractnumber = cnumber;
 	}
 
 	public void addElement() {
@@ -85,6 +97,14 @@ public class view4controller {
 	
 	public void getNewValue() {
 		
+	}
+	
+	public void showInfo() {
+		if (infolabel.isVisible()) {
+			infolabel.setVisible(false);
+		} else {
+			infolabel.setVisible(true);
+		}
 	}
 
 	public void closeOperation() {

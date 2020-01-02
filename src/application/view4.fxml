@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -85,5 +86,11 @@
             <Image url="@img/view4picture.PNG" />
          </image>
       </ImageView>
+      <Label fx:id="infolabel" layoutX="278.0" layoutY="480.0" text="🛈Hier siehst du deinen Trainingsverlauf" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <ToggleButton layoutX="841.0" layoutY="85.0" mnemonicParsing="false" onAction="#showInfo" styleClass="informationbutton" stylesheets="@application.css" text="🛈Hilfestellung" />
 	</children>
 </AnchorPane>

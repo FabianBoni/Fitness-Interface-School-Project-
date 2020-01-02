@@ -73,3 +73,7 @@
 .confirmationbuttons:hover{
 	-fx-cursor: hand;
 }
+
+.informationbutton{
+	-fx-background-color: white;
+}

@@ -6,6 +6,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -74,5 +75,15 @@
             <Font name="Microsoft New Tai Lue" size="22.0" />
          </font>
       </Label>
+      <Label fx:id="infolabel" layoutX="29.0" layoutY="502.0" text="🛈Erstelle dir einen Account oder melde dich an" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <ToggleButton layoutX="841.0" layoutY="85.0" mnemonicParsing="false" onAction="#showInfo" styleClass="informationbutton" stylesheets="@application.css" text="🛈Hilfestellung">
+         <font>
+            <Font />
+         </font>
+      </ToggleButton>
 	</children>
 </AnchorPane>

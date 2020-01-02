@@ -1,7 +1,9 @@
 package application;
 
 import java.io.IOException;
-import java.util.Random;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -23,10 +25,11 @@ public class view3controller {
 	private double yOffset = 0;
 
 	private String contract;
+	private int random;
 
 	@FXML
 	private Label contracttype, contractnumber, attention, confirmationinfo, contractlabels1, contractlabels2,
-			contractlabels3, contractlabels4, contractlabels5, contractlabels6;
+			contractlabels3, contractlabels4, contractlabels5, contractlabels6, infolabel;
 
 	@FXML
 	private AnchorPane anchorpane;
@@ -76,6 +79,7 @@ public class view3controller {
 
 		view4controller v4 = fxmlLoader.<view4controller>getController();
 		v4.getContracttyype(this.contract);
+		v4.getContractNumber(this.random);
 	}
 
 	@FXML
@@ -142,8 +146,31 @@ public class view3controller {
 		}
 	}
 
-	public void setContractNumber() {
-		contractnumber.setText("" + getRandomNumber(1000, 9999));
+	public void setContractNumber(int cnumber) {
+		this.random = cnumber;
+		contractnumber.setText("" + this.random);
+		setDate();
+		setTrainingDate();
+	}
+
+	public void setDate() {
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd.MM.yyyy");
+		Date currentDate = new Date();
+		Calendar c = Calendar.getInstance();
+		c.setTime(currentDate);
+		Date realDate = c.getTime();
+		contractlabels4.setText(dateformat.format(realDate));
+		setTrainingDate();
+	}
+
+	public void setTrainingDate() {
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd.MM.yyyy");
+		Date currentDate = new Date();
+		Calendar c = Calendar.getInstance();
+		c.setTime(currentDate);
+		c.add(Calendar.DATE, 7);
+		Date realDate = c.getTime();
+		contractlabels6.setText(dateformat.format(realDate));
 	}
 
 	public void cancle() {
@@ -215,10 +242,13 @@ public class view3controller {
 		contracttype.setEffect(null);
 		contractimage.setEffect(null);
 	}
-
-	public static int getRandomNumber(int min, int max) {
-		Random r = new Random();
-		return r.nextInt((max - min) + 1) + min;
+	
+	public void showInfo() {
+		if (infolabel.isVisible()) {
+			infolabel.setVisible(false);
+		} else {
+			infolabel.setVisible(true);
+		}
 	}
 
 	public void closeOperation() {

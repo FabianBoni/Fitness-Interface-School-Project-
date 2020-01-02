@@ -32,7 +32,7 @@ public class view1controller {
 
 	@FXML
 	Label containerlabeltitle1, containerlabelmessage1, containerlabeltitle2, containerlabelmessage2,
-			containerlabeltitle3, containerlabelmessage3;
+			containerlabeltitle3, containerlabelmessage3, infolabel;
 
 	@FXML
 	protected void loginregister(ActionEvent event) {
@@ -133,7 +133,7 @@ public class view1controller {
 			}, 5000);
 		}
 	}
-	
+
 	public void pauseContract() {
 		if (this.contracttype.equals("Noob")) {
 			confirmationcontainer1.setVisible(true);
@@ -181,9 +181,17 @@ public class view1controller {
 			}, 5000);
 		}
 	}
-	
+
 	public void editContract() {
-		
+
+	}
+
+	public void showInfo() {
+		if (infolabel.isVisible()) {
+			infolabel.setVisible(false);
+		} else {
+			infolabel.setVisible(true);
+		}
 	}
 
 	public void closeOperation() {
